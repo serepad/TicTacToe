@@ -50,7 +50,11 @@ public class TicTacToe {
     void turnPlayer(){
         int x, y;
         do {
-            
-        }
+            System.out.println("Enter coordinates X Y (1-"+FIELD_SIZE+"):");
+            x = sc.nextInt() - 1;
+            y = sc.nextInt() - 1;
+        } while (!isCellEmpty(x,y));
+        field[x][y] = PLAYER_DOT;
     }
+    
 }
