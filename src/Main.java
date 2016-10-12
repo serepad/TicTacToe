@@ -21,5 +21,36 @@ public class TicTacToe {
         new TicTacToe().go();
     }
 
-    
+    void go(){
+        initField();
+        printField();
+        while (true){
+            turnPlayer();
+            printField();
+            if (checkWin(PLAYER_DOT)){
+                System.out.println("You Won!!!");
+                break;
+            }
+            if(isFieldFull()){
+                System.out.println("Sorry draw...");
+                break;
+            }
+            turnAI();
+            printField();
+            if(checkWin(AI_DOT)){
+                System.out.println("AI Won!?!?!");
+                break;
+            }
+            if(isFieldFull()){
+                System.out.println("Sorry draw...");
+            }
+        }
+    }
+
+    void turnPlayer(){
+        int x, y;
+        do {
+            
+        }
+    }
 }
