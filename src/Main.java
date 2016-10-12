@@ -94,5 +94,10 @@ public class TicTacToe {
         return false;
     }
 
+    void initField() {
+        for (int i = 0; i < FIELD_SIZE; i++)
+            for (int j = 0; j < FIELD_SIZE; j++)
+                field[i][j] = EMPTY_DOT;
+    }
 
 }
