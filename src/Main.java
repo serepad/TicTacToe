@@ -72,5 +72,12 @@ public class TicTacToe {
         return false;
     }
 
-    
+    boolean isFieldFull(){
+        for (int i = 0; i < FIELD_SIZE; i++)
+            for (int j = 0; j < FIELD_SIZE; j++)
+                if (field[i][j] == EMPTY_DOT) return false;
+        return true;
+    }
+
+
 }
