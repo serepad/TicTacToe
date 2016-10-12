@@ -56,5 +56,15 @@ public class TicTacToe {
         } while (!isCellEmpty(x,y));
         field[x][y] = PLAYER_DOT;
     }
+
+    void turnAI(){
+        int x, y;
+        do {
+            x = rand.nextInt(FIELD_SIZE);
+            y = rand.nextInt(FIELD_SIZE);
+        } while (!isCellEmpty(x,y));
+        field[x][y] = AI_DOT;
+    }
+
     
 }
