@@ -79,5 +79,20 @@ public class TicTacToe {
         return true;
     }
 
+    boolean checkWin(char ch) {
+        // check horizontals
+        if (field[0][0] == ch && field[0][1] == ch && field[0][2] == ch) return true;
+        if (field[1][0] == ch && field[1][1] == ch && field[1][2] == ch) return true;
+        if (field[2][0] == ch && field[2][1] == ch && field[2][2] == ch) return true;
+        // check verticals
+        if (field[0][0] == ch && field[1][0] == ch && field[2][0] == ch) return true;
+        if (field[0][1] == ch && field[1][1] == ch && field[2][1] == ch) return true;
+        if (field[0][2] == ch && field[1][2] == ch && field[2][2] == ch) return true;
+        // check diag
+        if (field[0][0] == ch && field[1][1] == ch && field[2][2] == ch) return true;
+        if (field[2][0] == ch && field[1][1] == ch && field[0][2] == ch) return true;
+        return false;
+    }
+
 
 }
