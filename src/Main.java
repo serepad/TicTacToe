@@ -100,4 +100,11 @@ public class TicTacToe {
                 field[i][j] = EMPTY_DOT;
     }
 
+    void printField() {
+        for (int i = 0; i < FIELD_SIZE; i++) {
+            for (int j = 0; j < FIELD_SIZE; j++)
+                System.out.print(field[i][j]);
+            System.out.println();
+        }
+    }
 }
