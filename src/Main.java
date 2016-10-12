@@ -66,5 +66,11 @@ public class TicTacToe {
         field[x][y] = AI_DOT;
     }
 
+    boolean isCellEmpty(int x, int y){
+        if (x < 0 || y < 0 || x > FIELD_SIZE - 1 || y > FIELD_SIZE - 1) return false;
+        if (field[x][y] == EMPTY_DOT) return true;
+        return false;
+    }
+
     
 }
